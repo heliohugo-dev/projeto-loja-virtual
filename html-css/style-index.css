@@ -1,33 +1,28 @@
+/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
+/* ========== TIPOGRAFIA ========== */
 body {
     font-family: "Nunito", Arial, sans-serif;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: "Nunito", Arial, sans-serif;
     font-weight: 1000;
 }
 
 h1 {
-    font-family: "Nunito", Arial, sans-serif;
     font-weight: 350;
 }
 
 p {
-    font-family: "Nunito", Arial, sans-serif;
     font-weight: 450;
 }
 
-header {
-    margin: auto;
-    max-width: none;
-}
-
+/* ========== HEADER ========== */
 .container-header {
     background-color: rgb(241, 241, 241);
 }
@@ -41,16 +36,14 @@ header {
 }
 
 .nav-header {
-    text-decoration: none;
-    list-style: none;
+    display: flex;
     gap: 20px;
 }
 
 .a {
-    font-family: "Nunito", Arial, sans-serif;
-    font-weight: 600;
     position: relative;
     display: inline-block;
+    font-weight: 600;
     color: #0f0e0e;
     text-decoration: none;
     padding: 8px 0;
@@ -71,8 +64,7 @@ header {
     width: 100%;
 }
 
-
-
+/* ========== MAIN ========== */
 main {
     padding: 32px;
 }
@@ -81,106 +73,79 @@ main {
     background-color: white;
 }
 
-.container-article1 {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 50px;
-}
-
-.article1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 30px;
-}
-
-.produto-article1 {
-    background-color: rgb(241, 241, 241);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 15px;
-    width: 300px;
-    gap: 8px;
-    border-radius: 3px;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
-}
-
-.img-roupas img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; 
-    border-radius: 2px;
-}
-
-.produto-article1 img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;  
-}
-
+/* ========== VITRINES (roupas e calçados) ========== */
+.container-article1,
 .container-article2 {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 50px;
 }
 
+.article1,
 .article2 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: stretch;   /* todos os cards da linha com a mesma altura */
+    width: 100%;
+}
+
+.article1 {
+    gap: 40px;
+}
+
+.article2 {
     gap: 30px;
 }
 
+/* ========== CARDS ========== */
+.produto-article1,
 .produto-article2 {
     background-color: rgb(241, 241, 241);
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 15px;
-    width: 500px;
+    align-items: stretch;   /* imagem e botão ocupam a largura do card */
     gap: 8px;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
     border-radius: 3px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
 }
 
-.img-calcados img{
+/* ========== IMAGENS ========== */
+.img-roupas img,
+.img-calcados img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
-    object-fit: cover; 
-    border-radius: 2px; 
+    object-fit: cover;
+    border-radius: 2px;
 }
 
+/* ========== BOTÃO ========== */
 .button-products {
-    margin-top: auto;
-    align-self: center;
+    margin-top: auto;       /* empurra o botão para a base do card */
+    padding-top: 8px;
+    width: 100%;
 }
 
 .button {
+    display: block;
+    width: 100%;
+    padding: 20px;
     background-color: black;
     color: white;
     font-family: "Nunito", Arial, sans-serif;
     font-size: medium;
-    width: 270px;
-    padding: 20px;
-    margin: auto 10px 10px 10px;
-    cursor: pointer;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
 
+/* ========== FOOTER ========== */
 footer {
     background-color: rgb(241, 241, 241);
     display: flex;
@@ -191,4 +156,48 @@ footer {
 
 .autorais {
     font-size: small;
+}
+
+/* ========== RESPONSIVO (celular) ========== */
+@media (max-width: 768px) {
+
+    .container-nav {
+        padding: 20px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .container-article1,
+    .container-article2 {
+        padding: 20px 0;
+    }
+
+    /* Um card embaixo do outro */
+    .article1,
+    .article2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .produto-article1,
+    .produto-article2 {
+        max-width: 400px;
+    }
+
+    .button {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
 }
