@@ -93,7 +93,9 @@ main {
 .article1 {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
 }
 
 .produto-article1 {
@@ -101,7 +103,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items:start;
+    align-items: start;
     padding: 15px;
     width: 300px;
     gap: 8px;
@@ -124,16 +126,6 @@ main {
     object-fit: cover;  
 }
 
-.button-products {
-    position: relative;
-    left: 50px;
-}
-
-.button {
-    padding: 10px;
-    margin: 10px;
-}
-
 .container-article2 {
     display: flex;
     flex-direction: row;
@@ -146,16 +138,16 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
 }
 
 .produto-article2 {
-    background-color:rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items:start;
+    align-items: start;
     padding: 15px;
     width: 500px;
     gap: 8px;
@@ -171,10 +163,32 @@ main {
     border-radius: 2px; 
 }
 
+.button-products {
+    margin-top: auto;
+    align-self: center;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-family: "Nunito", Arial, sans-serif;
+    font-size: medium;
+    width: 270px;
+    padding: 20px;
+    margin: auto 10px 10px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+
 footer {
     background-color: rgb(241, 241, 241);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
+}
+
+.autorais {
+    font-size: small;
 }
