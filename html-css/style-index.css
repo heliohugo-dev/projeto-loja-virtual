@@ -1,11 +1,10 @@
-/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========== TIPOGRAFIA ========== */
+/* FONTE */
 body {
     font-family: "Nunito", Arial, sans-serif;
 }
@@ -22,7 +21,7 @@ p {
     font-weight: 450;
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 .container-header {
     background-color: rgb(241, 241, 241);
 }
@@ -64,7 +63,7 @@ p {
     width: 100%;
 }
 
-/* ========== MAIN ========== */
+/* MAIN */
 main {
     padding: 32px;
 }
@@ -73,22 +72,20 @@ main {
     background-color: white;
 }
 
-/* ========== VITRINES (roupas e calçados) ========== */
-.container-article1,
-.container-article2 {
+/* VITRINE */
+.container-article1, .container-article2 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
 }
 
-.article1,
-.article2 {
+.article1, .article2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;   /* todos os cards da linha com a mesma altura */
+    align-items: stretch;   
     width: 100%;
 }
 
@@ -100,13 +97,13 @@ main {
     gap: 30px;
 }
 
-/* ========== CARDS ========== */
+/* CARDS */
 .produto-article1,
 .produto-article2 {
     background-color: rgb(241, 241, 241);
     display: flex;
     flex-direction: column;
-    align-items: stretch;   /* imagem e botão ocupam a largura do card */
+    align-items: stretch;
     gap: 8px;
     width: 100%;
     max-width: 300px;
@@ -115,7 +112,7 @@ main {
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== IMAGENS ========== */
+/* IMAGENS */
 .img-roupas img,
 .img-calcados img {
     display: block;
@@ -125,9 +122,9 @@ main {
     border-radius: 2px;
 }
 
-/* ========== BOTÃO ========== */
+/* BOTÃO */
 .button-products {
-    margin-top: auto;       /* empurra o botão para a base do card */
+    margin-top: auto;
     padding-top: 8px;
     width: 100%;
 }
@@ -145,7 +142,7 @@ main {
     cursor: pointer;
 }
 
-/* ========== FOOTER ========== */
+/* FOOTER */
 footer {
     background-color: rgb(241, 241, 241);
     display: flex;
@@ -158,7 +155,7 @@ footer {
     font-size: small;
 }
 
-/* ========== RESPONSIVO (celular) ========== */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
 
     .container-nav {
@@ -179,9 +176,7 @@ footer {
         padding: 20px 0;
     }
 
-    /* Um card embaixo do outro */
-    .article1,
-    .article2 {
+    .article1, .article2 {
         flex-direction: column;
         align-items: center;
         gap: 20px;

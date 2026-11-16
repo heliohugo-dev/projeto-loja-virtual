@@ -1,76 +1,152 @@
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Nunito", Arial, sans-serif;
+    background-color: #fff;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: "Nunito", Arial, sans-serif;
+h2 {
     font-weight: 1000;
 }
 
-h1 {
-    font-family: "Nunito", Arial, sans-serif;
-    font-weight: 350;
-}
-
-p {
-    font-family: "Nunito", Arial, sans-serif;
-    font-weight: 450;
-}
-
-header {
-    margin: auto;
-    max-width: none;
-}
-
+/* HEADER */
 .container-header {
-    background-color: rgb(241, 241, 241);
+     background-color: rgb(241, 241, 241); 
 }
 
 .container-nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 35px;
 }
 
 .nav-header {
-    text-decoration: none;
-    list-style: none;
+    display: flex;
     gap: 20px;
 }
 
+/* Links do menu com sublinhado animado. O mesmo usado na página dos produtos */
 .a {
-    font-family: "Nunito", Arial, sans-serif;
     font-weight: 600;
-    position: relative;
-    display: inline-block;
-    color: #0f0e0e;
+    color: #000;
     text-decoration: none;
+    position: relative; 
     padding: 8px 0;
 }
 
 .a::after {
-    content: "";
+    content: ""; 
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 40%;
+    width: 0;
     height: 2px;
-    background-color: #000000;
-    transition: width 0.3s ease;
+    background: #000;
+    transition: 0.3s;
 }
 
 .a:hover::after {
     width: 100%;
 }
 
-main {
-    padding: 32px;
+/* LAYOUT DO CARRINHO */
+.main-cart {
+    padding: 40px 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-cart h1 {
+    margin-bottom: 30px;
+    font-weight: 350;
+}
+
+/* Contêiner flexível: produtos de um lado, resumo do outro */
+.cart-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.cart-items {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo do item individual no carrinho */
+.cart-item {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 20px; 
+}
+
+.cart-item img {
+    border-radius: 4px;
+}
+
+/* Resumo do Pedido (lateral) */
+.cart-summary {
+    flex: 1;
+    background: rgb(241, 241, 241);
+    padding: 25px;
+    border-radius: 3px;
+    height: fit-content;
+}
+
+.cart-summary h2 {
+    margin-bottom: 20px; 
+    font-size: 1.2rem;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    display: flex; 
+    justify-content: space-between; 
+    font-weight: 800;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* Botão de Finalizar Compra */
+.button-checkout {
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer-cart {
+    background: rgb(241, 241, 241);
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    font-size: small;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .cart-wrapper { flex-direction: column; }
 }

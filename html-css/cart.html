@@ -1,46 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
-
+    <title>Hugo Boss - Carrinho</title>
+    
+    <!-- Fonte Nunito do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
     
-    <title>Carrinho</title>
-
     <link rel="stylesheet" href="style-cart.css">
 </head>
 <body>
     <header class="container-header">
-
         <div class="container-nav">
             <h2>HUGO BOSS</h2>
-
             <nav class="nav-header">
-                    <a href="#" class="a">Produtos</a>
-                    <a href="#" class="a">Carrinho</a>
+                <a href="index.html" class="a">Produtos</a>
+                <a href="cart.html" class="a">Carrinho</a>
             </nav>
         </div>
-
     </header>
 
-    <main>
-        <div class="container-main">
-            <h1>Produtos</h1>
+    <main class="main-cart">
+        <h1>Seu Carrinho</h1>
 
-            <div class="container-article">
-                <div class="article-products">
-                    <article>
+        <div class="cart-wrapper">
+            <section class="cart-items">
+                <article class="cart-item">
+                    <img src="img/4063552465266_1.webp" alt="Polo Paddy" width="100">
+                    <div class="item-details">
+                        <h3>Polo Paddy</h3>
+                        <p>Tamanho: M</p>
+                        <p>Preço: $ 1.499,00</p>
+                    </div>
+                </article>
 
-                    </article>
+                <article class="cart-item">
+                    <img src="img/4063552203240-SLIDE_1.webp" alt="Sandália" width="100">
+                    <div class="item-details">
+                        <h3>Sandália</h3>
+                        <p>Tamanho: 40</p>
+                        <p>Preço: $ 899,00</p>
+                    </div>
+                </article>
+            </section>
 
+            <aside class="cart-summary">
+                <h2>Resumo do Pedido</h2>
+                <div class="summary-line">
+                    <span>Subtotal:</span> 
+                    <span>$ 2.398,00</span>
                 </div>
-            </div>
+                <div class="summary-line">
+                    <span>Frete:</span> 
+                    <span>Grátis</span>
+                </div>
+                <hr>
+                <div class="summary-total">
+                    <span>Total:</span> 
+                    <span>$ 2.398,00</span>
+                </div>
+                <button class="button-checkout">FINALIZAR COMPRA</button>
+            </aside>
         </div>
-
     </main>
+
+    <footer class="footer-cart">
+        <p class="autorais">@2026 HUGO BOSS DE CARUARU LTDA</p>
+    </footer>
 </body>
 </html>
